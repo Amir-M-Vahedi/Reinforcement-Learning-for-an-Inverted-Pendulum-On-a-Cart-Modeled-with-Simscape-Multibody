@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="09/04/20||15:53:28" using="Simscape Multibody Link Version 6.0" from="SolidWorks 27.3.0"/>
+<ModelUnits mass="kilogram" length="meter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="InvPend" uid="InvPend" version="119">
+<AssemblyFile name="InvPend.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="Rod-1" uid="Rod-1" entityUid="Rod*:*Default">
+<Transform>
+<Rotation>-0.99974436391640709 0.022609883179244505 0 -0.022609883179244897 -0.99974436391640686 0 0 0 1</Rotation>
+<Translation>0.45402917275445986 0.56963402560427356 0.81089665303997438</Translation>
+</Transform>
+</Instance>
+<Instance name="Cart-1" uid="Cart-1" entityUid="Cart*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.4040291727544596 0.56963402560427356 0.7058966530399744</Translation>
+</Transform>
+</Instance>
+<Instance name="RAIL-1" uid="RAIL-1" grounded="true" entityUid="RAIL*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.0091302513378449524 0.49463402560427355 0.7058966530399744</Translation>
+</Transform>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Coincident name="Coincident1">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>RAIL-1</Uid>
+</InstancePath>
+<Position>1 0.049999999999999989 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Cart-1</Uid>
+</InstancePath>
+<Position>0.099999999999999978 -0.025000000000000022 0.025000000000000022</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident2">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>RAIL-1</Uid>
+</InstancePath>
+<Position>1 0 -0.025000000000000022</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Cart-1</Uid>
+</InstancePath>
+<Position>0.099999999999999978 -0.025000000000000022 -0.025000000000000022</Position>
+<Axis>0 5.5511151231257827e-16 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric1">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Cart-1</Uid>
+</InstancePath>
+<Position>0.049999999999999989 0 0.125</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Rod-1</Uid>
+</InstancePath>
+<Position>0 0 0.020000000000000018</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident4">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Cart-1</Uid>
+</InstancePath>
+<Position>0.049999999999999989 0 0.125</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Rod-1</Uid>
+</InstancePath>
+<Position>0 0 0.020000000000000018</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+</Assemblies>
+<Parts>
+<Part name="Cart" uid="Cart*:*Default" version="116">
+<ModelUnits mass="kilogram" length="meter"/>
+<PartFile name="Cart.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>1.4103429173528854</Mass>
+<CenterOfMass>0.050000000000000003 0.0033236597584352873 0.0025059804192317583</CenterOfMass>
+<Inertia>0.0041925104660763164 0.0042862151211939831 0.0022019380897512 1.1746783215149121e-05 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Cart_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0" g="1" b="0" a="1"/>
+<Diffuse r="0" g="1" b="0" a="1"/>
+<Specular r="0" g="0.5" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="RAIL" uid="RAIL*:*Default" version="107">
+<ModelUnits mass="kilogram" length="meter"/>
+<PartFile name="RAIL.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>8.7499999999999982</Mass>
+<CenterOfMass>0.5 0.0053571428571428563 0</CenterOfMass>
+<Inertia>0.017457217261904755 0.74348958333333315 0.73230096726190474 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="RAIL_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0" g="0" b="0.50196078431372548" a="1"/>
+<Diffuse r="0" g="0" b="0.50196078431372548" a="1"/>
+<Specular r="0" g="0" b="0.25098039215686274" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Rod" uid="Rod*:*Default" version="109">
+<ModelUnits mass="kilogram" length="meter"/>
+<PartFile name="Rod.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.15549778714378215</Mass>
+<CenterOfMass>0 0.071008513172325149 0.0099999999999999985</CenterOfMass>
+<Inertia>0.00034840367256236719 3.8706005506790775e-05 0.00037674315892623916 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Rod_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="0" b="0" a="1"/>
+<Diffuse r="1" g="0" b="0" a="1"/>
+<Specular r="0.5" g="0" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
